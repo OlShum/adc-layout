@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Энциклопедия</h1>
+
+<% @articles.each do |article| %>
+
+<div class="">
+  <%= article.type %>
+  <%= article.head %>
+  <%= link_to 'Show', article %>
+  <%= link_to 'Edit', edit_layout_path(article) %>
+  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
+<% end %>
+<br>
+
+<%= link_to 'New Article', new_article_path %>

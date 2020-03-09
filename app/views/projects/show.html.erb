@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @project.type %>
-</p>
-
-<p>
   <strong>Head:</strong>
   <%= @project.head %>
 </p>
@@ -27,7 +22,7 @@
 
 <p>
   <strong>Cover:</strong>
-  <%= @project.cover %>
+  <%= image_tag @project.cover.url %>
 </p>
 
 <p>
