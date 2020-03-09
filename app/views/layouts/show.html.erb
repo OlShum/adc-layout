@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @layout.type %>
+</p>
+
+<p>
+  <strong>Head:</strong>
+  <%= @layout.head %>
+</p>
+
+<p>
+  <strong>Lead:</strong>
+  <%= @layout.lead %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @layout.tag %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @layout.author %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <%= @layout.cover %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @layout.description %>
+</p>
+
+<p>
+  <strong>Share:</strong>
+  <%= @layout.share %>
+</p>
+
+<%= link_to 'Edit', edit_layout_path(@layout) %> |
+<%= link_to 'Back', layouts_path %>
