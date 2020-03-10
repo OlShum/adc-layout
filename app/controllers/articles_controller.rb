@@ -42,9 +42,9 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        if article.type == "Article"
+        if @article.type == "Article"
           redirect_path = article_path(@article)
-        elsif article.type == "Project"
+        elsif @article.type == "Project"
           redirect_path = project_path(@article)
         end
         format.html { redirect_to redirect_path, notice: 'Article was successfully updated.' }

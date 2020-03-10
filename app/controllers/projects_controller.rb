@@ -42,9 +42,9 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        if project.type == "Project"
+        if @project.type == "Project"
           redirect_path = project_path(@project)
-        elsif project.type == "Article"
+        elsif @project.type == "Article"
           redirect_path = article_path(@project)
         end
         format.html { redirect_to redirect_path, notice: 'Project was successfully updated.' }
