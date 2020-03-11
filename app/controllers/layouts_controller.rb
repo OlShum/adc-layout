@@ -69,6 +69,6 @@ class LayoutsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def layout_params
-      params.require(:layout).permit(:type, :head, :lead, :tag, :author, :cover, :description)
+      params.require(:layout).permit(:type, :head, :lead, :tag, :author, :cover, :squarecover, :description)
     end
 end

@@ -16,6 +16,8 @@
 
 <div class="">
   <%= render layout %>
+  <%= image_tag layout.cover.url || "", width: 200%>
+  <%= image_tag layout.squarecover.url || "", width: 100%>
   <%#= layout.type %>
   <%#= layout.head %>
   <%#= layout.lead %>
