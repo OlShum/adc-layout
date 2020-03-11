@@ -27,12 +27,12 @@
 
 <p>
   <strong>Cover:</strong>
-  <%= image_tag @layout.cover.url %>
+  <%= image_tag @layout.cover.url || ""%>
 </p>
 
 <p>
   <strong>Squarecover:</strong>
-  <%= image_tag @layout.squarecover.url %>
+  <%= image_tag @layout.squarecover.url || "" %>
 </p>
 
 <p>
