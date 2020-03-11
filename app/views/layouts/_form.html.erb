@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.radio_button :type, 'Article' %> Article<br />
+    <%= form.radio_button :type, 'Project' %> Project<br />
   </div>
 
   <div class="field">
