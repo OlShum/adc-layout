@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Энциклопедия', articles_path %>
+<%= link_to 'Проекты', projects_path %>
+<%#= link_to 'О нас', about_path %>
+<%= link_to 'Сотрудничество', new_cooperation_path(@cooperation) %>
+
 <h1>Проекты</h1>
 
 <% @projects.each do |project| %>
