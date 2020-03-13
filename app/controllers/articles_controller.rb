@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to layouts_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to pages_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,6 +74,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:type, :head, :lead, :tag, :author, :cover, :description)
+      params.require(:article).permit(:type, :head, :lead, :author, :cover, :squarecover, :description)
     end
 end

@@ -61,7 +61,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to layouts_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to pages_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,6 +74,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:type, :head, :lead, :tag, :author, :cover, :description)
+      params.require(:project).permit(:type, :head, :lead, :tag, :author, :cover, :squarecover, :description)
     end
 end

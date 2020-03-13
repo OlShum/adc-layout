@@ -10,19 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_201434) do
+ActiveRecord::Schema.define(version: 2020_03_11_144926) do
 
-  create_table "layouts", force: :cascade do |t|
-    t.string "type"
+  create_table "add_squarecover_to_pages", force: :cascade do |t|
+    t.string "squarecover"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cooperations", force: :cascade do |t|
+    t.string "company"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string "type", default: "Article"
     t.string "head"
     t.string "lead"
     t.string "tag"
     t.string "author"
     t.string "cover"
     t.string "description"
-    t.string "share"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "squarecover"
   end
 
 end

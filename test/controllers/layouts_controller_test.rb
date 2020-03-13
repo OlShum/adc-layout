@@ -1,48 +1,48 @@
 require 'test_helper'
 
-class LayoutsControllerTest < ActionDispatch::IntegrationTest
+class PagesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @layout = layouts(:one)
+    @page = pages(:one)
   end
 
   test "should get index" do
-    get layouts_url
+    get pages_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_layout_url
+    get new_page_url
     assert_response :success
   end
 
-  test "should create layout" do
-    assert_difference('Layout.count') do
-      post layouts_url, params: { layout: { author: @layout.author, cover: @layout.cover, description: @layout.description, head: @layout.head, lead: @layout.lead, share: @layout.share, tag: @layout.tag, type: @layout.type } }
+  test "should create page" do
+    assert_difference('Page.count') do
+      post pages_url, params: { page: { author: @page.author, cover: @page.cover, description: @page.description, head: @page.head, lead: @page.lead, share: @page.share, tag: @page.tag, type: @page.type } }
     end
 
-    assert_redirected_to layout_url(Layout.last)
+    assert_redirected_to page_url(Page.last)
   end
 
-  test "should show layout" do
-    get layout_url(@layout)
+  test "should show page" do
+    get page_url(@page)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_layout_url(@layout)
+    get edit_page_url(@page)
     assert_response :success
   end
 
-  test "should update layout" do
-    patch layout_url(@layout), params: { layout: { author: @layout.author, cover: @layout.cover, description: @layout.description, head: @layout.head, lead: @layout.lead, share: @layout.share, tag: @layout.tag, type: @layout.type } }
-    assert_redirected_to layout_url(@layout)
+  test "should update page" do
+    patch page_url(@page), params: { page: { author: @page.author, cover: @page.cover, description: @page.description, head: @page.head, lead: @page.lead, share: @page.share, tag: @page.tag, type: @page.type } }
+    assert_redirected_to page_url(@page)
   end
 
-  test "should destroy layout" do
-    assert_difference('Layout.count', -1) do
-      delete layout_url(@layout)
+  test "should destroy page" do
+    assert_difference('Page.count', -1) do
+      delete page_url(@page)
     end
 
-    assert_redirected_to layouts_url
+    assert_redirected_to pages_url
   end
 end
