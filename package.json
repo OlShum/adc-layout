@@ -1,5 +1,5 @@
 {
-  "name": "adc_layout",
+  "name": "adc_page",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :cooperations, except: :edit
-  resources :layouts
+  resources :pages
   resources :articles
   resources :projects
   resources :about

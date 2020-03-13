@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_03_11_144926) do
 
-  create_table "add_squarecover_to_layouts", force: :cascade do |t|
+  create_table "add_squarecover_to_pages", force: :cascade do |t|
     t.string "squarecover"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -25,15 +25,14 @@ ActiveRecord::Schema.define(version: 2020_03_11_144926) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "layouts", force: :cascade do |t|
-    t.string "type"
+  create_table "pages", force: :cascade do |t|
+    t.string "type", default: "Article"
     t.string "head"
     t.string "lead"
     t.string "tag"
     t.string "author"
     t.string "cover"
     t.string "description"
-    t.string "share"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "squarecover"

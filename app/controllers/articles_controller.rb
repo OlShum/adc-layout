@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to layouts_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to pages_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

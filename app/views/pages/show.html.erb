@@ -2,48 +2,48 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @layout.type %>
+  <%= @page.type %>
 </p>
 
 <p>
   <strong>Head:</strong>
-  <%= @layout.head %>
+  <%= @page.head %>
 </p>
 
 <p>
   <strong>Lead:</strong>
-  <%= @layout.lead %>
+  <%= @page.lead %>
 </p>
 
 <p>
   <strong>Tag:</strong>
-  <%= @layout.tag %>
+  <%= @page.tag %>
 </p>
 
 <p>
   <strong>Author:</strong>
-  <%= @layout.author %>
+  <%= @page.author %>
 </p>
 
 <p>
   <strong>Cover:</strong>
-  <%= image_tag @layout.cover.url || ""%>
+  <%= image_tag @page.cover.url || ""%>
 </p>
 
 <p>
   <strong>Squarecover:</strong>
-  <%= image_tag @layout.squarecover.url || "" %>
+  <%= image_tag @page.squarecover.url || "" %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @layout.description %>
+  <%= @page.description %>
 </p>
 
 <p>
   <strong>Share:</strong>
-  <%= @layout.share %>
+  <%= @page.share %>
 </p>
 
-<%= link_to 'Edit', edit_layout_path(@layout) %> |
-<%= link_to 'Back', layouts_path %>
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pages</h1>
+
+<th>Type</th>
+<th>Head</th>
+<th>Lead</th>
+<th>Tag</th>
+<th>Author</th>
+<th>Cover</th>
+<th>Description</th>
+<th>Share</th>
+<th colspan="3"></th>
+
+<% @pages.each do |page| %>
+
+<div class="">
+  <%= render page %>
+  <%#= page.type %>
+  <%#= page.head %>
+  <%#= page.lead %>
+  <%#= page.tag %>
+  <%#= page.author %>
+  <%#= page.cover %>
+  <%#= page.description %>
+  <%#= link_to 'Show', page %>
+  <%#= link_to 'Edit', edit_page_path(page) %>
+  <%#= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
+<% end %>
+<br>
+
+<%= link_to 'New Page', new_page_path %>

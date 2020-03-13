@@ -1,57 +1,57 @@
 require "application_system_test_case"
 
-class LayoutsTest < ApplicationSystemTestCase
+class PagesTest < ApplicationSystemTestCase
   setup do
-    @layout = layouts(:one)
+    @page = pages(:one)
   end
 
   test "visiting the index" do
-    visit layouts_url
-    assert_selector "h1", text: "Layouts"
+    visit pages_url
+    assert_selector "h1", text: "Pages"
   end
 
-  test "creating a Layout" do
-    visit layouts_url
-    click_on "New Layout"
+  test "creating a Page" do
+    visit pages_url
+    click_on "New Page"
 
-    fill_in "Author", with: @layout.author
-    fill_in "Cover", with: @layout.cover
-    fill_in "Description", with: @layout.description
-    fill_in "Head", with: @layout.head
-    fill_in "Lead", with: @layout.lead
-    fill_in "Share", with: @layout.share
-    fill_in "Tag", with: @layout.tag
-    fill_in "Type", with: @layout.type
-    click_on "Create Layout"
+    fill_in "Author", with: @page.author
+    fill_in "Cover", with: @page.cover
+    fill_in "Description", with: @page.description
+    fill_in "Head", with: @page.head
+    fill_in "Lead", with: @page.lead
+    fill_in "Share", with: @page.share
+    fill_in "Tag", with: @page.tag
+    fill_in "Type", with: @page.type
+    click_on "Create Page"
 
-    assert_text "Layout was successfully created"
+    assert_text "Page was successfully created"
     click_on "Back"
   end
 
-  test "updating a Layout" do
-    visit layouts_url
+  test "updating a Page" do
+    visit pages_url
     click_on "Edit", match: :first
 
-    fill_in "Author", with: @layout.author
-    fill_in "Cover", with: @layout.cover
-    fill_in "Description", with: @layout.description
-    fill_in "Head", with: @layout.head
-    fill_in "Lead", with: @layout.lead
-    fill_in "Share", with: @layout.share
-    fill_in "Tag", with: @layout.tag
-    fill_in "Type", with: @layout.type
-    click_on "Update Layout"
+    fill_in "Author", with: @page.author
+    fill_in "Cover", with: @page.cover
+    fill_in "Description", with: @page.description
+    fill_in "Head", with: @page.head
+    fill_in "Lead", with: @page.lead
+    fill_in "Share", with: @page.share
+    fill_in "Tag", with: @page.tag
+    fill_in "Type", with: @page.type
+    click_on "Update Page"
 
-    assert_text "Layout was successfully updated"
+    assert_text "Page was successfully updated"
     click_on "Back"
   end
 
-  test "destroying a Layout" do
-    visit layouts_url
+  test "destroying a Page" do
+    visit pages_url
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
 
-    assert_text "Layout was successfully destroyed"
+    assert_text "Page was successfully destroyed"
   end
 end
