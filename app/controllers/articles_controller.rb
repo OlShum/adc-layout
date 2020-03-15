@@ -42,11 +42,6 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        if @article.type == "Article"
-          redirect_path = article_path(@article)
-        elsif @article.type == "Project"
-          redirect_path = project_path(@article)
-        end
         format.html { redirect_to redirect_path, notice: 'Article was successfully updated.' }
         format.json { render :show, status: :ok, location: @article }
       else
@@ -74,6 +69,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:type, :head, :lead, :author, :cover, :squarecover, :description)
+      params.require(:article).permit(:type, :head, :lead, :tag, :author, :cover, :squarecover, :description)
     end
 end

@@ -1,7 +1,7 @@
 class CreatePages < ActiveRecord::Migration[6.0]
   def change
     create_table :pages do |t|
-      t.string :type, required: true, default: 'Article'
+      t.string :type
       t.string :head
       t.string :lead
       t.string :tag
